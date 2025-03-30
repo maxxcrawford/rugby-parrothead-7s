@@ -17,12 +17,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Pinyon+Script&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- FavIcon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Map -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    
     <!-- Final URL: parrothead7s.com -->
     
     <!-- Facebook Meta Tags -->
@@ -44,35 +50,161 @@
 
 </head>
 
-<body class="bg-[#fef0e5]">
+<body class="bg-[#fef0e5] rokkitt-400">
     <header>
+        <div class="bg-[#fab31b]">
+            <nav class="max-w-screen-lg mx-auto px-8">
+                <ul class="flex items-center py-4 sm:gap-4 ">
+                    <li>
+                        <a class="hidden sm:block  text-[#b84b3e] px-2 pb-px text-xl" href="#">Details &amp; Rules</a>
+                    </li>
+                    <li>
+                        <a class=" text-[#b84b3e]  pr-2 sm:px-2 pb-px text-lg sm:text-xl" href="#">Map &amp; Parking</a>
+                    </li>
+                    <li>
+                        <a class="hidden md:block  text-[#b84b3e] px-2 pb-px text-xl" href="#">Sponsors</a>
+                    </li>
+                    <li>
+                        <a class="ml-2 sm:ml-0  text-[#b84b3e] px-2 pb-px text-lg sm:text-xl" href="#">FAQs</a>
+                    </li>
+                    <li>
+                        <a class="hidden lg:block  text-[#b84b3e] px-2 pb-px text-xl" href="#">Tulsa RFC</a>
+                    </li>
+                    <li class="ml-auto">
+                        <a class="block bg-[#b84b3e] text-stone-50 rounded px-4 py-1 text-xl" href="#">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <main class="">
-        <div class="mt-8 max-w-screen-lg mx-auto px-8">
+        <section class="mt-8 max-w-screen-lg mx-auto px-8">
             <h1><img class="w-full max-w-3xl mx-auto mb-2" src="images/teaser/hero-v2.png" alt="Parrothead 7s"></h1>
-        </div>
-        <div class="bg-[#04a95a] pt-2 pb-4 px-8 text-center text-[#fef0e5] mb-12">
-            <h2 class="luxurious-script-regular lowercase font-thin text-4xl sm:text-5xl md:text-6xl">Presented by <span class="inline-block"><a class="cursor-pointer" href="https://www.tulsarugbyclub.com/" target="blank">Tulsa Rugby Club</a></span> </h2>
-        </div>
-        <div class=" max-w-screen-lg mx-auto px-8 text-center font-sans text-[#04a95a] font-bold ">
-            <h3 class="text-4xl md:text-6xl lg:text-7xl mb-2 md:mb-4 uppercase">July 12, 2025</h3>
-            <p class="mb-12 font-mono uppercase text-xl md:text-2xl">Back and better than ever</p>
-            <h3 class="text-4xl md:text-6xl lg:text-7xl mb-2 md:mb-4 uppercase">Tulsa Rugby Pitch
-                <small class="block font-thin text-xl italic">3772-3798 Riverside Dr, Tulsa, OK</small>
+        </section>
+        <!-- <section class="bg-[#9cbc9c] pt-3 pb-4 px-8 text-center text-[#fef0e5] mb-12 font-serif">
+            <h2 class=" text-4xl ">Presented by <span class="inline-block"><a class="cursor-pointer underline hover:text-[#f0b644]" href="https://www.tulsarugbyclub.com/" target="blank">Tulsa Rugby Club</a></span> </h2>
+        </section> -->
+        <section class="max-w-screen-lg mx-auto px-8 text-center text-[#b84b3e] mb-8">
+            <h3 class="text-2xl md:text-3xl lg:text-4xl mb-2 lg:mb-4 uppercase flex gap-0 md:gap-6 flex-col md:flex-row justify-center w-full font-bold">
+                <span>Saturday, July 12, 2025</span>
+                <span class="md:block hidden">/</span>
+                <span>Tulsa Rugby Pitch</span>
             </h3>
-            <p class="font-mono uppercase text-xl md:text-2xl">More information coming soon</p>
-            <!-- TODO: Add interest/sign-up form -->
+
+            <div class="max-w-screen-sm mx-auto px-8 mb-8">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde odio, nulla, laudantium voluptates minima ipsum nam id perspiciatis, provident aut optio alias facilis perferendis eum asperiores voluptatibus voluptate molestiae eos.</p>
+            </div>
+
+            <a class="text-2xl md:text-3xl inline-block bg-[#b84b3e] text-[#fef0e5] rounded px-8 py-2 font-bold" href="https://www.tulsarugbyclub.com/">Register Now</a>
+            
+        </section>
+        
+        <div class="px-4">
+            <img class="mx-auto w-full max-w-3xl" src="/images/teaser/trees.png" alt="">
         </div>
+        <section class="bg-[#fdd292] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-4 ">Tournament Details</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate voluptas iste, at eveniet enim in ipsam distinctio nesciunt libero earum, architecto eos? Minus laboriosam quo rem, neque quas ipsa.</p>
+                <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab porro, vero consequatur veritatis voluptatum praesentium incidunt facilis vel maiores unde? Voluptatem ullam enim totam aliquam perspiciatis assumenda nesciunt similique.</p>
+            </div>
+        </section>
+        <section class="bg-[#fef0e5] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-6">FAQs</h2>
+                <ul class="flex flex-col gap-8">
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Lorem ipsum dolor sit amet?</span>
+                        <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Reprehenderit in voluptate velit?</span>
+                        <p>Duis aute irure dolor in  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum?</span>
+                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class=" py-12 md:pb-24 bg-[#fab31b]">
+             <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-2">Tournament Location</h2>
+                <p class="mb-8">This tournment will be held at the Tuls Rugby Club pitch — located in the Heart of the River Parks, directly south of the Gathering Place. It is located at <a class="underline" href="https://maps.app.goo.gl/9Bo1TQyQtkxKamjz9">3772-3798 Riverside Dr, Tulsa, OK</a>.</p>
+                <!-- <div id="map" style="height: 400px;"></div> -->
+                 <!-- <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-95.98991990089418%2C36.10601714647418%2C-95.98013520240785%2C36.11253530758999&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=17/36.109276/-95.985028">View Larger Map</a></small> -->
+                  <div class="mb-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9195.908614007398!2d-95.98522784840182!3d36.11307200522428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b694aa0a49e7bf%3A0x5add601f67359cfd!2sTulsa%20Rugby%20Pitch!5e0!3m2!1sen!2sus!4v1743318578239!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+
+                  <h3 class="text-4xl font-bold mb-2">Parking</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis laudantium corporis, nesciunt, fuga sed impedit delectus dolor ratione repudiandae commodi debitis cum reprehenderit. Dicta id voluptatum, alias unde dolor iste!</p>
+             </div>
+        </section>
+        <section class=" bg-[#9cbc9c]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-2">Sponsors</h2>
+                <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <ul class="flex gap-12 flex-col justify-center items-center">
+                    <li>
+                        <a class="" href="https://tequilamicampo.com/">
+                            <img class="w-full max-w-xs" src="/images/teaser/mi-campo.png" alt="Tequila Mi Campo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="https://mcnellies.com/" target="_blank">
+                            <img class="w-full max-w-sm" src="/images/teaser/mcnellies.png" alt="McNellie's Pub">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="https://goldenarbortreeservice.com/" target="_blank">
+                            <img class="w-full max-w-md" src="/images/teaser/golden-arbor-v2.png" alt="Golden Arbor Tree Service">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="bg-rugby  py-12">
+             <div class="max-w-screen-md mx-auto px-8 text-[#242c4c]">
+                <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
+                    <div class="shrink-0">
+                        <a href="https://www.tulsarugbyclub.com/"><img class="block w-full max-w-48" src="/images/teaser/logo.png" alt="Tulsa Rugby Club"></a>
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold mb-2">Tulsa Rugby Club</h2>
+                        <p class="mb-4">Founded in 1974, Tulsa Rugby Club has a proud tradition of competitive rugby and community involvement in Oklahoma. Home to both men's and women's teams, the club competes in regional and national competitions. Tulsa Rugby is honored to host the Parrothead Rugby 7s tournament and showcase the best of rugby in the heartland.</p>
+                        <a class="inline-block text-xl bg-[#242c4c] hover:bg-sky-900 text-sky-200 rounded px-8 py-2 font-bold" href="https://www.tulsarugbyclub.com/">Learn More</a>
+                    </div>
+                </div>
+             </div>
+        </section>
+        <!-- <section>
+            <form class="w-full max-w-lg mx-auto" name="contact" netlify>
+                <p>
+                    <label>Name <input class="block w-24 bg-white b-[#9cbc9c]" type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email <input class="block w-24 bg-white border-b-[#9cbc9c]" type="email" name="email" /></label>
+                </p>
+                <p>
+                    <button class="block bg-green-500" type="submit">Send</button>
+                </p>
+            </form>
+        </section> -->
     </main>
-    <footer class="mt-8 max-w-screen-lg mx-auto px-8">
-        <div class="plam-bg h-24 sm:h-42 md:h-72 lg:h-96"></div>
+    <footer class="py-3 text-right">
+        <div class="max-w-screen-lg mx-auto px-8 text-yellow-80 opacity-50 italic">
+            &copy; 2025 Tulsa Rugby Club
+        </div>
     </footer>
+    <!-- <footer class="mt-8 max-w-screen-lg mx-auto px-8">
+        <div class="plam-bg h-24 sm:h-42 md:h-72 lg:h-96"></div>
+    </footer> -->
 
     <!-- Put HTML Here -->
-    <script>
-    // Put Scripts Here
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
