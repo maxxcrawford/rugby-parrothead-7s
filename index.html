@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html class="scroll-smooth" lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -17,12 +17,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Pinyon+Script&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- FavIcon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Icon -->    
+     <script src="https://kit.fontawesome.com/ad8248e0fc.js" crossorigin="anonymous"></script>
+    
     <!-- Final URL: parrothead7s.com -->
     
     <!-- Facebook Meta Tags -->
@@ -44,35 +49,249 @@
 
 </head>
 
-<body class="bg-[#fef0e5]">
-    <header>
+<body class="bg-[#fef0e5] rokkitt-400">
+    <header class="md:sticky md:top-0 shadow-md z-20">
+        <div class="bg-[#fab31b] ">
+            <nav class="max-w-screen-lg mx-auto px-8">
+                <ul class="flex items-center py-4 gap-4 font-bold">
+                    <li>
+                        <a class="block text-[#b84b3e] hover:text-[#db311d] sm:pr-0 px-2 pb-px text-xl" href="#overview">
+                            <span class="sm:hidden">Details</span>
+                            <span class="hidden sm:inline-block">Details &amp; Rules</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class=" text-[#b84b3e] hover:text-[#db311d]  pr-2 sm:px-2 pb-px text-lg sm:text-xl" href="#map">Map</a>
+                    </li>
+                    <!-- TODO: Full Map Content -->
+                    <!-- <li>
+                        <a class=" text-[#b84b3e] hover:text-[#db311d]  pr-2 sm:px-2 pb-px text-lg sm:text-xl" href="#map">Map &amp; Parking</a>
+                    </li> -->
+                    <!-- TODO: Add Content -->
+                    <!-- <li>
+                        <a class="ml-2 sm:ml-0  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-lg sm:text-xl" href="#faqs">FAQs</a>
+                    </li> -->
+                    <li class="hidden md:block">
+                        <a class="block text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#sponsors">Sponsors</a>
+                    </li>
+
+                    <li class="hidden lg:block">
+                        <a class="block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#tulsa">Tulsa RFC</a>
+                    </li>
+                    <li class="hidden sm:block">
+                        <a class="block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#contact">Contact</a>
+                    </li>
+                    <li class="ml-auto">
+                        <a class="block bg-[#b84b3e] hover:bg-[#db311d]  text-stone-50 rounded px-4 py-1 text-xl" href="/register">Register Now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <main class="">
-        <div class="mt-8 max-w-screen-lg mx-auto px-8">
+        <section class="mt-8 max-w-screen-lg mx-auto px-8">
             <h1><img class="w-full max-w-3xl mx-auto mb-2" src="images/teaser/hero-v2.png" alt="Parrothead 7s"></h1>
-        </div>
-        <div class="bg-[#04a95a] pt-2 pb-4 px-8 text-center text-[#fef0e5] mb-12">
-            <h2 class="luxurious-script-regular lowercase font-thin text-4xl sm:text-5xl md:text-6xl">Presented by <span class="inline-block"><a class="cursor-pointer" href="https://www.tulsarugbyclub.com/" target="blank">Tulsa Rugby Club</a></span> </h2>
-        </div>
-        <div class=" max-w-screen-lg mx-auto px-8 text-center font-sans text-[#04a95a] font-bold ">
-            <h3 class="text-4xl md:text-6xl lg:text-7xl mb-2 md:mb-4 uppercase">July 12, 2025</h3>
-            <p class="mb-12 font-mono uppercase text-xl md:text-2xl">Back and better than ever</p>
-            <h3 class="text-4xl md:text-6xl lg:text-7xl mb-2 md:mb-4 uppercase">Tulsa Rugby Pitch
-                <small class="block font-thin text-xl italic">3772-3798 Riverside Dr, Tulsa, OK</small>
+        </section>
+        <!-- <section class="bg-[#9cbc9c] pt-3 pb-4 px-8 text-center text-[#fef0e5] mb-12 font-serif">
+            <h2 class=" text-4xl ">Presented by <span class="inline-block"><a class="cursor-pointer underline decoration-2 hover:text-[#f0b644]" href="https://www.tulsarugbyclub.com/" target="blank">Tulsa Rugby Club</a></span> </h2>
+        </section> -->
+        <section id="intro" class="max-w-screen-lg mx-auto px-8 text-center text-[#b84b3e] mb-8">
+            <!-- mb-2 lg:mb-4 -->
+            <h3 class="text-2xl md:text-3xl lg:text-4xl mb-8 uppercase flex gap-0 md:gap-6 flex-col md:flex-row justify-center w-full font-bold">
+                <span>Saturday, July 12, 2025</span>
+                <span class="md:block hidden">/</span>
+                <span>Tulsa Rugby Pitch</span>
             </h3>
-            <p class="font-mono uppercase text-xl md:text-2xl">More information coming soon</p>
-            <!-- TODO: Add interest/sign-up form -->
+
+            <!-- TODO: Add Content -->
+            <div class="max-w-screen-md mx-auto px-8 mb-8 ">
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde odio, nulla, laudantium voluptates minima ipsum nam id perspiciatis, provident aut optio alias facilis perferendis eum asperiores voluptatibus voluptate molestiae eos.</p> -->
+
+                <div class="flex flex-col gap-8 md:flex-row">
+                    <a href="/register" class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold" >Register Your Team</a>
+                    <a href="/pay" class="text-2xl md:text-3xl inline-block border-2 text-[#4ca761] border-[#4ca761] hover:bg-[#318946] hover:border-[#318946]  hover:text-[#fef0e5] rounded px-8 py-2 font-bold" >Pay Registration Fee</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="px-4">
+            <img class="mx-auto w-full max-w-3xl" src="/images/teaser/trees.png" alt="">
         </div>
+        <section id="overview" class="bg-[#fdd292] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-4 ">Tournament Details</h2>
+                <p class="text-lg/6 mb-8">The men’s tournament will feature six teams split into two pools of three. Each team will play two pool matches, followed by a knockout round where all teams are guaranteed at least one more game. The top teams will advance to the semifinals and finals, while remaining teams will compete in placement matches, including a Plate Final.<br/><br/>The women’s tournament will include four teams in a single pool, playing round-robin style. The top two teams will advance to a final match, while the remaining teams will compete for third place.</p>
+                <!-- <h3 class="text-3xl font-bold mb-4 ">Bracket Details</h3>
+                <p class="text-lg/6 mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab porro, vero consequatur veritatis voluptatum praesentium incidunt facilis vel maiores unde? Voluptatem ullam enim totam aliquam perspiciatis assumenda nesciunt similique.</p> -->
+
+                <h3 class="text-3xl font-bold mb-4 ">Registration Process</h3>
+                <p class="mb-8 text-lg/6">Registration is now open! To secure your spot, please complete the registration form and submit the $250 team fee via PayPal. Both steps are required to confirm your entry. Ready to play?</p>
+
+                <!-- TODO: Team Registration -->
+                <!-- <a class="text-2xl md:text-3xl inline-block bg-[#b84b3e] hover:bg-[#db311d] text-[#fef0e5] rounded px-8 py-2 font-bold" href="/register">Register Team  Now</a> -->
+
+                <div class="flex flex-col gap-8 md:flex-row">
+                    <a href="/register" class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold text-center" >Register Your Team</a>
+                    <a href="/pay" class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold text-center" >Pay Registration Fee</a>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- <section id="faqs" class="bg-[#fef0e5] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-6">FAQs</h2>
+                <ul class="flex flex-col gap-8">
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Lorem ipsum dolor sit amet?</span>
+                        <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Reprehenderit in voluptate velit?</span>
+                        <p>Duis aute irure dolor in  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li>
+                        <span class="block font-bold text-lg/5 mb-1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum?</span>
+                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+        <section id="map" class=" py-12 md:pb-24 bg-[#fab31b]">
+             <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-2">Tournament Location</h2>
+                <p class="mb-8 text-lg/6">This tournment will be held at the Tuls Rugby Club pitch — located in the Heart of the River Parks, directly south of the Gathering Place. It is located at <a class="underline decoration-2" href="https://maps.app.goo.gl/9Bo1TQyQtkxKamjz9">3772-3798 Riverside Dr, Tulsa, OK</a>.</p>
+                <!-- <div id="map" style="height: 400px;"></div> -->
+                 <!-- <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-95.98991990089418%2C36.10601714647418%2C-95.98013520240785%2C36.11253530758999&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=17/36.109276/-95.985028">View Larger Map</a></small> -->
+                  <div class="mb-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9195.908614007398!2d-95.98522784840182!3d36.11307200522428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b694aa0a49e7bf%3A0x5add601f67359cfd!2sTulsa%20Rugby%20Pitch!5e0!3m2!1sen!2sus!4v1743318578239!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+
+                  <!-- TODO: Add Content -->
+                  <!-- <h3 class="text-4xl font-bold mb-2">Parking</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis laudantium corporis, nesciunt, fuga sed impedit delectus dolor ratione repudiandae commodi debitis cum reprehenderit. Dicta id voluptatum, alias unde dolor iste!</p> -->
+             </div>
+        </section>
+        <!-- Sponsors -->
+        <section id="sponsors" class=" bg-[#9cbc9c]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8 text-center">
+                <h2 class="text-4xl font-bold mb-2">Sponsors</h2>
+                <p class="mb-2 text-lg/6 max-w-xl mx-auto">This tournament wouldn't be possible without the support of our incredible sponsors. Thank you for backing this event and Tulsa Rugby.</p>
+                <p class="mb-8 text-lg/6 max-w-xl mx-auto">If you would like to donate/sponsor us, please <a class="underline decoration-2" href="mailto:parrothead7s@tulsarugbyclub.com">contact us</a>.</p>
+                <ul class="flex gap-12 flex-col justify-center items-center">
+                    <li>
+                        <a class="" href="https://tequilamicampo.com/">
+                            <img class="w-full max-w-xs ml-4" src="/images/teaser/mi-campo.png" alt="Tequila Mi Campo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="https://mcnellies.com/" target="_blank">
+                            <img class="w-full max-w-sm" src="/images/teaser/mcnellies.png" alt="McNellie's Pub">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="https://goldenarbortreeservice.com/" target="_blank">
+                            <img class="w-full max-w-md" src="/images/teaser/golden-arbor-v2.png" alt="Golden Arbor Tree Service">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Merch -->
+        <section class="bg-[#fef0e5] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-2">Merch</h2>
+                <p class="mb-8 text-lg/6 max-w-xl">
+                    Our official Parrothead tournamnet merch collection is coming soon! Stay tuned for tropical shirts, hats, and more — designed for fans who love the vibe.
+                </p>
+                <div class="flex gap-16">
+                    <div class="relative max-w-64 text-center z-0">
+                        <span class="-rotate-10 absolute left-1/2 top-1/2 -translate-1/2 block bg-[#fab31b] py-2 w-full text-center text-xl font-bold z-20">Coming Soon</span>
+                        <img class="w-full blur-xs mb-8" src="/images/teaser/merch-hat.png" alt="">
+                        <!-- <a class="w-full cursor-not-allowed py-3 text-xl font-bold sm:py-0 sm:w-56 sm:px-0 sm:flex sm:h-12 items-center justify-center bg-[#00ab5a] xhover:bg-[#018a49] text-[#fef0e5] rounded px-4  mx-auto" href="">Add to Cart</a> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Tulsa Club -->
+        <section id="tulsa" class="bg-rugby  py-12">
+             <div class="max-w-screen-md mx-auto px-8 text-[#242c4c]">
+                <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
+                    <div class="shrink-0">
+                        <a href="https://www.tulsarugbyclub.com/"><img class="block w-full max-w-48" src="/images/teaser/logo.png" alt="Tulsa Rugby Club"></a>
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold mb-2">Tulsa Rugby Club</h2>
+                        <p class="mb-6 text-lg/6">Founded in 1974, Tulsa Rugby Club has a proud tradition of competitive rugby and community involvement in Oklahoma. Home to both men's and women's teams, the club competes in regional and national competitions. Tulsa Rugby is honored to host the Parrothead Rugby 7s tournament and showcase the best of rugby in the heartland.</p>
+                        <a class="inline-block text-xl bg-[#242c4c] hover:bg-sky-900 text-sky-200 rounded px-8 py-2 font-bold" href="https://www.tulsarugbyclub.com/">Learn More</a>
+                    </div>
+                </div>
+             </div>
+        </section>
+        <!-- Contact -->
+         <section id="contact" class="bg-[#fef0e5] text-[#b84b3e]  py-12 md:pb-24">
+            <div class="max-w-screen-md mx-auto px-8">
+                <h2 class="text-4xl font-bold mb-6">Contact</h2>
+                <p class="mb-8 text-lg/6">Got a question about the event, registration, or the game schedule? We’re here to help. Whether you’re a player, fan, or curious wanderer—we’d love to hear from you.</p>
+                <h3 class="text-2xl font-bold mb-2">Follow us:</h3>
+                <div class="flex gap-4 mb-8">
+                    <a href="https://www.instagram.com/parrothead7s/" class="text-2xl hover:text-[#db311d]" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:info@tulsarugbyclub.com" class="text-2xl hover:text-[#db311d]" ><i class="fa-solid fa-envelope"></i></a>
+                    <!-- <a class="text-2xl hover:text-[#db311d]" href="#"><i class="fa-brands fa-facebook"></i></a> -->
+                </div>
+                <!-- <hr class="mb-8"> -->
+                <form method="POST"  netlify name="contact">
+                   <h3 class="text-2xl font-bold mb-2">Message us:</h3>
+                   <div class="mb-4">
+                        <label class="block" for="name">Name</label>
+                        <input name="name" class="block border py-2 px-4 w-full rounded" type="text" placeholder="Captain Tony">
+                   </div>
+                   <div class="mb-4">
+                        <label class="block" for="email">Email</label>
+                        <input name="email" class="block border py-2 px-4 w-full rounded" type="text" placeholder="cheeseburger@paradise.com">
+                   </div>
+                   
+                   <div class="mb-4">
+                        <label class="block" for="message">Message</label>
+                        <textarea placeholder="Scrum, sun, and a side of salt…" class="block border py-2 px-4 w-full rounded" name="message" id="" rows="4"></textarea>
+                   </div>
+
+                   <div class="mb-4 text-right">
+                    <input type="submit" value="Submit" class="w-full sm:w-auto sm:inline-block bg-[#b84b3e] hover:bg-[#db311d] text-[#fef0e5] rounded px-8 py-2 font-bold cursor-pointer">
+                   </div>
+
+                    
+                </form>
+
+            </div>
+        </section>
+        <!-- <section>
+            <form class="w-full max-w-lg mx-auto" name="contact" netlify>
+                <p>
+                    <label>Name <input class="block w-24 bg-white b-[#9cbc9c]" type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email <input class="block w-24 bg-white border-b-[#9cbc9c]" type="email" name="email" /></label>
+                </p>
+                <p>
+                    <button class="block bg-green-500" type="submit">Send</button>
+                </p>
+            </form>
+        </section> -->
     </main>
-    <footer class="mt-8 max-w-screen-lg mx-auto px-8">
-        <div class="plam-bg h-24 sm:h-42 md:h-72 lg:h-96"></div>
+    <footer class="py-3 text-right">
+        <div class="max-w-screen-lg mx-auto px-8 text-yellow-80 opacity-50 italic">
+            &copy; 2025 Tulsa Rugby Club
+        </div>
     </footer>
+    <!-- <footer class="mt-8 max-w-screen-lg mx-auto px-8">
+        <div class="plam-bg h-24 sm:h-42 md:h-72 lg:h-96"></div>
+    </footer> -->
 
     <!-- Put HTML Here -->
-    <script>
-    // Put Scripts Here
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

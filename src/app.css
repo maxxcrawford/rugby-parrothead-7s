@@ -19,7 +19,19 @@ html {
   font-style: normal;
 }
 
+.bg-rugby {
+    background: url(images/teaser/rugby-bg.jpg) #609ace center bottom no-repeat;
+    background-size: cover;
+}
+
 .plam-bg {
     background: url(images/teaser/background.png) #fef0e5 center bottom no-repeat;
     background-size: contain;
+}
+
+.rokkitt-400 {
+  font-family: "Rokkitt", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
