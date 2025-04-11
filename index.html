@@ -53,29 +53,37 @@
     <header class="md:sticky md:top-0 shadow-md">
         <div class="bg-[#fab31b] ">
             <nav class="max-w-screen-lg mx-auto px-8">
-                <ul class="flex items-center py-4 sm:gap-4 ">
+                <ul class="flex items-center py-4 gap-4 sm:gap-4 ">
                     <li>
-                        <a class="hidden sm:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#overview">Details &amp; Rules</a>
+                        <a class="block text-[#b84b3e] hover:text-[#db311d] pr-2 sm:pr-0 px-2 pb-px text-xl" href="#overview">
+                            <span class="sm:hidden">Details</span>
+                            <span class="hidden sm:inline-block">Details &amp; Rules</span>
+                        </a>
                     </li>
                     <li>
+                        <a class=" text-[#b84b3e] hover:text-[#db311d]  pr-2 sm:pr-0 pb-px text-lg sm:text-xl" href="#map">Map</a>
+                    </li>
+                    <!-- TODO: Full Map Content -->
+                    <!-- <li>
                         <a class=" text-[#b84b3e] hover:text-[#db311d]  pr-2 sm:px-2 pb-px text-lg sm:text-xl" href="#map">Map &amp; Parking</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- TODO: Add Content -->
+                    <!-- <li>
                         <a class="ml-2 sm:ml-0  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-lg sm:text-xl" href="#faqs">FAQs</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="hidden md:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#sponsors">Sponsors</a>
                     </li>
 
                     <li>
-                        <a class="hidden lg:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#tulsa">Tulsa RFC</a>
+                        <a class="hidden md:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#tulsa">Tulsa RFC</a>
                     </li>
                     <li>
-                        <a class="hidden lg:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#contact">Contact</a>
+                        <a class="hidden md:block  text-[#b84b3e] hover:text-[#db311d] px-2 pb-px text-xl" href="#contact">Contact</a>
                     </li>
-                    <li class="ml-auto">
+                    <!-- <li class="ml-auto">
                         <a class="block bg-[#b84b3e] hover:bg-[#db311d]  text-stone-50 rounded px-4 py-1 text-xl" href="#">Register</a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
         </div>
@@ -89,17 +97,34 @@
             <h2 class=" text-4xl ">Presented by <span class="inline-block"><a class="cursor-pointer underline hover:text-[#f0b644]" href="https://www.tulsarugbyclub.com/" target="blank">Tulsa Rugby Club</a></span> </h2>
         </section> -->
         <section class="max-w-screen-lg mx-auto px-8 text-center text-[#b84b3e] mb-8">
-            <h3 class="text-2xl md:text-3xl lg:text-4xl mb-2 lg:mb-4 uppercase flex gap-0 md:gap-6 flex-col md:flex-row justify-center w-full font-bold">
+            <!-- mb-2 lg:mb-4 -->
+            <h3 class="text-2xl md:text-3xl lg:text-4xl mb-8 uppercase flex gap-0 md:gap-6 flex-col md:flex-row justify-center w-full font-bold">
                 <span>Saturday, July 12, 2025</span>
                 <span class="md:block hidden">/</span>
                 <span>Tulsa Rugby Pitch</span>
             </h3>
 
-            <div class="max-w-screen-sm mx-auto px-8 mb-8">
+            <!-- TODO: Add Content -->
+            <div class="max-w-screen-sm mx-auto px-8 mb-8 hidden">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde odio, nulla, laudantium voluptates minima ipsum nam id perspiciatis, provident aut optio alias facilis perferendis eum asperiores voluptatibus voluptate molestiae eos.</p>
             </div>
 
-            <a class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold" href="#">Register Your Team</a>
+            <!-- TODO: Add Register Form -->
+            <!-- <a class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold" href="#">Register Your Team</a> -->
+
+            <form id="signup" netlify class="max-w-md mx-auto">
+                <h4 class="text-xl/5 sm:text-2xl/6 font-bold block mb-6 max-w-sm mx-auto">Sign-up to be the first to know when registration opens</h4>
+                <div class="flex flex-col sm:flex-row gap-4 items-end justify-center">
+                    <div class="text-left w-full block text-lg sm:text-xl">
+                        <label class="block w-full" for="preRegEmail">Email address:</label>
+                        <input class="block border py-4 px-4 w-full sm:flex items-center sm:py-0 sm:h-12" id="preRegEmail" type="email" placeholder="cheeseburger@paradise.com"  />
+                    </div>
+                    <button class="w-full py-3 text-xl font-bold sm:py-0 sm:w-36 sm:flex sm:h-12 items-center justify-center bg-[#b84b3e] hover:bg-[#db311d] text-[#fef0e5] rounded px-4 cursor-pointer" type="submit">Sign Up</button>
+
+                </div>
+            </form>
+
+
             
         </section>
         
@@ -150,18 +175,19 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9195.908614007398!2d-95.98522784840182!3d36.11307200522428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b694aa0a49e7bf%3A0x5add601f67359cfd!2sTulsa%20Rugby%20Pitch!5e0!3m2!1sen!2sus!4v1743318578239!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
 
-                  <h3 class="text-4xl font-bold mb-2">Parking</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis laudantium corporis, nesciunt, fuga sed impedit delectus dolor ratione repudiandae commodi debitis cum reprehenderit. Dicta id voluptatum, alias unde dolor iste!</p>
+                  <!-- TODO: Add Content -->
+                  <!-- <h3 class="text-4xl font-bold mb-2">Parking</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis laudantium corporis, nesciunt, fuga sed impedit delectus dolor ratione repudiandae commodi debitis cum reprehenderit. Dicta id voluptatum, alias unde dolor iste!</p> -->
              </div>
         </section>
         <section id="sponsors" class=" bg-[#9cbc9c]  py-12 md:pb-24">
-            <div class="max-w-screen-md mx-auto px-8">
+            <div class="max-w-screen-md mx-auto px-8 text-center">
                 <h2 class="text-4xl font-bold mb-2">Sponsors</h2>
-                <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="mb-8 text-lg/6 max-w-xl mx-auto">This tournament wouldn't be possible without the support of our incredible sponsors. Thank you for backing this event and Tulsa Rugby.</p>
                 <ul class="flex gap-12 flex-col justify-center items-center">
                     <li>
                         <a class="" href="https://tequilamicampo.com/">
-                            <img class="w-full max-w-xs" src="/images/teaser/mi-campo.png" alt="Tequila Mi Campo">
+                            <img class="w-full max-w-xs ml-4" src="/images/teaser/mi-campo.png" alt="Tequila Mi Campo">
                         </a>
                     </li>
                     <li>
@@ -195,7 +221,7 @@
          <section id="contact" class="bg-[#fef0e5] text-[#b84b3e]  py-12 md:pb-24">
             <div class="max-w-screen-md mx-auto px-8">
                 <h2 class="text-4xl font-bold mb-6">Contact</h2>
-                <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit similique nobis illo! Voluptates dignissimos consectetur porro quasi ullam iusto sequi quas quo! Magni quas ducimus accusamus. Dignissimos optio non iste!</p>
+                <p class="mb-8 ">Got a question about the event, registration, or the game schedule? We’re here to help. Whether you’re a player, fan, or curious wanderer—we’d love to hear from you.</p>
                 <h3 class="text-2xl font-bold mb-2">Follow us:</h3>
                 <div class="flex gap-4 mb-8">
                     <a class="text-2xl hover:text-[#db311d]" href="#"><i class="fa-brands fa-instagram"></i></a>
