@@ -112,14 +112,14 @@
             <!-- TODO: Add Register Form -->
             <!-- <a class="text-2xl md:text-3xl inline-block bg-[#4ca761] hover:bg-[#318946] text-[#fef0e5] rounded px-8 py-2 font-bold" href="#">Register Your Team</a> -->
 
-            <form method="POST" netlify-honeypot="bot-field" netlify id="signup" netlify class="max-w-md mx-auto">
+            <form method="POST" netlify-honeypot="bot-field" netlify id="signup" netlify class="max-w-lg mx-auto">
                 <h4 class="text-xl/5 sm:text-2xl/6 font-bold block mb-6 max-w-sm mx-auto">Sign-up to be the first to know when registration opens</h4>
                 <div class="flex flex-col sm:flex-row gap-4 items-end justify-center">
                     <div class="text-left w-full block text-lg sm:text-xl">
                         <label class="block w-full" for="preRegEmail">Email address:</label>
-                        <input name="email" class="block border py-4 px-4 w-full sm:flex items-center sm:py-0 sm:h-12" id="preRegEmail" type="email" placeholder="cheeseburger@paradise.com"  />
+                        <input name="email" class="block border py-4 px-4 w-full sm:flex items-center sm:py-0 sm:h-12 rounded" id="preRegEmail" type="email" placeholder="cheeseburger@paradise.com"  />
                     </div>
-                    <button class="w-full py-3 text-xl font-bold sm:py-0 sm:w-56 sm:px-0 sm:flex sm:h-12 items-center justify-center bg-[#b84b3e] hover:bg-[#db311d] text-[#fef0e5] rounded px-4 cursor-pointer" type="submit">Pre-register</button>
+                    <button class="w-full py-3 text-xl font-bold sm:py-0 sm:w-56 sm:px-0 sm:flex sm:h-12 items-center justify-center bg-[#00ab5a] hover:bg-[#018a49] text-[#fef0e5] rounded px-4 cursor-pointer" type="submit">Pre-register</button>
 
                 </div>
             </form>
@@ -232,12 +232,12 @@
                 <form method="POST"  netlify name="contact">
                    <h3 class="text-2xl font-bold mb-2">Message us:</h3>
                    <div class="mb-4">
-                        <label class="block" for="">Name</label>
-                        <input class="block border py-2 px-4 w-full rounded" type="text" placeholder="Captain Tony">
+                        <label class="block" for="name">Name</label>
+                        <input name="name" class="block border py-2 px-4 w-full rounded" type="text" placeholder="Captain Tony">
                    </div>
                    <div class="mb-4">
-                        <label class="block" for="">Email</label>
-                        <input class="block border py-2 px-4 w-full rounded" type="text" placeholder="cheeseburger@paradise.com">
+                        <label class="block" for="email">Email</label>
+                        <input name="email" class="block border py-2 px-4 w-full rounded" type="text" placeholder="cheeseburger@paradise.com">
                    </div>
                    
                    <div class="mb-4">
