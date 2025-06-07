@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/register"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSewDBGFnA_4o3YaPQ_3zkFAEZbvGhz5qdpvzJcs7Mwy3DgOiQ/viewform?usp=header"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pay"
+  to = "https://www.paypal.com/ncp/payment/GDYC6S6CMWJMA"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/map"
+  to = "https://maps.app.goo.gl/4LTpxbKaCLoM8hoz9"
+  status = 301
+  force = true
