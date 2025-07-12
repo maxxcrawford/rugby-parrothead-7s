@@ -15,3 +15,9 @@
   to = "https://maps.app.goo.gl/4LTpxbKaCLoM8hoz9"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/qr"
+  to = "/schedule"
+  status = 301
+  force = true
