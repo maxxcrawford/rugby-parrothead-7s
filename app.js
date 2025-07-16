@@ -2,9 +2,9 @@
 	"use strict";
 
     const CSV_URLS = {
-        pool: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=0&single=true&output=csv',
-        semis: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=301385118&single=true&output=csv',
-        finals: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=2025152971&single=true&output=csv'
+        pool: './data/scores-pool.csv',
+        semis: './data/scores-semis.csv',
+        finals: './data/scores-finals.csv'
       };
 
       function fetchSheet(url, callback) {
@@ -27,15 +27,15 @@
               <div>${match['Match Info']}</div>
             </div>
             <div class="flex flex-col md:flex-row justify-between mb-2 items-center flex-wrap gap-1 md:gap-4 md:flex-nowrap">
-              <div class="team; flex items-center gap-4 md:w-2/5">
+              <div class="team; flex items-center gap-4 md:w-1/3 ">
                 <span class="block text-xl font-bold">${match['Team 1']}</span>
               </div>
-              <div class="text-3xl font-bold">
+              <div class="text-3xl font-bold md:w-1/3  text-center">
                 <span>${match['Team 1 Score']}</span>
                 -
                 <span>${match['Team 2 Score']}</span>
               </div>
-              <div class="team; flex items-center gap-4 flex-row-reverse md:w-2/5 md:text-right">
+              <div class="team; flex items-center gap-4 flex-row-reverse md:w-1/3 md:text-right ">
                 <span class="block text-xl font-bold">${match['Team 2']}</span>
               </div>
             </div>
