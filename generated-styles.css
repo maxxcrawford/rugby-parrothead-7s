@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-900: oklch(41.4% 0.112 45.904);
     --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-green-500: oklch(72.3% 0.219 149.579);
@@ -41,7 +40,6 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
     --leading-tight: 1.25;
-    --leading-snug: 1.375;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -348,9 +346,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-row {
-    flex-direction: row;
-  }
   .flex-row-reverse {
     flex-direction: row-reverse;
   }
@@ -446,38 +441,17 @@
   .bg-\[\#b84b3e\] {
     background-color: #b84b3e;
   }
-  .bg-\[\#f5e09b\] {
-    background-color: #f5e09b;
-  }
   .bg-\[\#fab31b\] {
     background-color: #fab31b;
   }
-  .bg-\[\#fad86a\] {
-    background-color: #fad86a;
-  }
-  .bg-\[\#fad86a\]\/0 {
-    background-color: color-mix(in oklab, #fad86a 0%, transparent);
-  }
-  .bg-\[\#fad86a\]\/10 {
-    background-color: color-mix(in oklab, #fad86a 10%, transparent);
-  }
-  .bg-\[\#fad86a\]\/25 {
-    background-color: color-mix(in oklab, #fad86a 25%, transparent);
-  }
   .bg-\[\#fad86a\]\/40 {
     background-color: color-mix(in oklab, #fad86a 40%, transparent);
-  }
-  .bg-\[\#fad86a\]\/50 {
-    background-color: color-mix(in oklab, #fad86a 50%, transparent);
   }
   .bg-\[\#fdd292\] {
     background-color: #fdd292;
   }
   .bg-\[\#fef0e5\] {
     background-color: #fef0e5;
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
   }
   .bg-amber-950 {
     background-color: var(--color-amber-950);
@@ -499,9 +473,6 @@
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
-  }
-  .px-0 {
-    padding-inline: calc(var(--spacing) * 0);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -589,10 +560,6 @@
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
     line-height: calc(var(--spacing) * 6);
-  }
-  .leading-snug {
-    --tw-leading: var(--leading-snug);
-    line-height: var(--leading-snug);
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);
@@ -754,11 +721,6 @@
   .sm\:justify-start {
     @media (width >= 40rem) {
       justify-content: flex-start;
-    }
-  }
-  .sm\:gap-4 {
-    @media (width >= 40rem) {
-      gap: calc(var(--spacing) * 4);
     }
   }
   .sm\:px-2 {

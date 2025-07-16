@@ -18,6 +18,12 @@
 
 [[redirects]]
   from = "/qr"
-  to = "/schedule"
+  to = "/results"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/schedule"
+  to = "/results"
   status = 301
   force = true
