@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "/pay"
-  to = "/"
+  to = "https://www.paypal.biz/tulsarugby"
   status = 302
   force = true
 
