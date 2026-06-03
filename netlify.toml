@@ -1,29 +1,47 @@
 [[redirects]]
   from = "/register"
-  to = "/"
-  status = 301
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSdCOQRf7f2p-tVSq5w6jIWUwdhFxy61Mj5KXD02jTXQhmHNQw/viewform?usp=dialog"
+  status = 302
   force = true
 
 [[redirects]]
   from = "/pay"
-  to = "/"
-  status = 301
+  to = "https://www.paypal.biz/tulsarugby"
+  status = 302
   force = true
 
 [[redirects]]
   from = "/map"
-  to = "https://maps.app.goo.gl/4LTpxbKaCLoM8hoz9"
-  status = 301
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/results"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/results.html"
+  to = "/"
+  status = 302
   force = true
 
 [[redirects]]
   from = "/qr"
-  to = "/results"
-  status = 301
+  to = "/"
+  status = 302
   force = true
 
 [[redirects]]
   from = "/schedule"
-  to = "/results"
-  status = 301
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/schedule.html"
+  to = "/"
+  status = 302
   force = true
