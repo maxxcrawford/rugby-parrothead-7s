@@ -12,7 +12,7 @@
 
 [[redirects]]
   from = "/map"
-  to = "/"
+  to = "/#map"
   status = 302
   force = true
 
@@ -30,18 +30,19 @@
 
 [[redirects]]
   from = "/qr"
-  to = "/"
+  # TODO: Point QR to the final schedule/results page once brackets and live scores are ready.
+  to = "/#schedule"
   status = 302
   force = true
 
 [[redirects]]
   from = "/schedule"
-  to = "/"
+  to = "/#schedule"
   status = 302
   force = true
 
 [[redirects]]
   from = "/schedule.html"
-  to = "/"
+  to = "/#schedule"
   status = 302
   force = true
