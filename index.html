@@ -156,7 +156,7 @@
                     </li>
                     <li class="bg-[#fef0e5]/70 rounded px-6 py-5">
                         <span class="block text-xl font-bold">After 4:00 PM</span>
-                        <span class="block text-lg">Sharky's after-party</span>
+                        <a class="block text-lg underline decoration-2 font-bold" href="https://www.sharkysonbrookside.com/" target="_blank">Sharky's after-party</a>
                     </li>
                 </ul>
                 <p class="text-lg/6">The full match schedule, QR code, pools, brackets, and captains meeting details will be posted once the schedule is finalized.</p>
@@ -258,22 +258,29 @@
         <section id="event-day" class="md:scroll-mt-12 bg-[#fdd292] text-[#b84b3e] py-12 md:pb-24">
             <div class="max-w-screen-md mx-auto px-8">
                 <h2 class="text-4xl font-bold mb-4">Event Day</h2>
-                <div class="grid gap-8 md:grid-cols-3">
-                    <div>
-                        <h3 class="text-3xl font-bold mb-3">Party Zone</h3>
-                        <!-- TODO: Preorders will not be available; add day-of merch details only when items/prices are final. -->
-                        <p class="text-lg/6">Food, drinks, games, giveaways, raffle items, and merch are planned for tournament day. Day-of payments are expected through Square, PayPal, and cash.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-3">After Party</h3>
-                        <p class="text-lg/6">Teams and spectators can head to Sharky's after 4:00 PM for the tournament after-party. Details will be included in team packets.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-3">Weather &amp; Safety</h3>
-                        <!-- TODO: Add final inclement weather plan and waiver/SIPP link when Maggie provides it. -->
-                        <p class="text-lg/6">An inclement weather plan and waiver details will be posted before tournament day. Team contacts will also receive event-day instructions before arrival.</p>
-                    </div>
-                </div>
+                <ul class="divide-y-2 divide-[#fab31b]">
+                    <li class="py-6 first:pt-0 md:flex md:gap-8">
+                        <h3 class="text-3xl font-bold mb-3 md:w-48 md:shrink-0">Party Zone</h3>
+                        <div class="md:flex-1">
+                            <!-- TODO: Preorders will not be available; add day-of merch details only when items/prices are final. -->
+                            <p class="text-lg/6">Food, drinks, games, giveaways, raffle items, and merch are planned for tournament day. Day-of payments are expected through Square, PayPal, and cash.</p>
+                        </div>
+                    </li>
+                    <li class="py-6 md:flex md:gap-8">
+                        <h3 class="text-3xl font-bold mb-3 md:w-48 md:shrink-0">After Party</h3>
+                        <div class="md:flex-1">
+                            <p class="text-lg/6 mb-3">Teams and spectators can head to <a class="underline decoration-2 font-bold" href="https://www.sharkysonbrookside.com/" target="_blank">Sharky's</a> (21+) after 4:00 PM for the tournament after-party.</p>
+                            <p class="text-lg/6">3415 S. Peoria Ave., Tulsa, OK 74105.</p>
+                        </div>
+                    </li>
+                    <li class="py-6 last:pb-0 md:flex md:gap-8">
+                        <h3 class="text-3xl font-bold mb-3 md:w-48 md:shrink-0">Weather &amp; Safety</h3>
+                        <div class="md:flex-1">
+                            <!-- TODO: Add final inclement weather plan and waiver/SIPP link when Maggie provides it. -->
+                            <p class="text-lg/6">An inclement weather plan and waiver details will be posted before tournament day. Team contacts will also receive event-day instructions before arrival.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
