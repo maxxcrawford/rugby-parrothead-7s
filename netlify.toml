@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/register"
-  to = "https://docs.google.com/forms/d/e/1FAIpQLSdCOQRf7f2p-tVSq5w6jIWUwdhFxy61Mj5KXD02jTXQhmHNQw/viewform?usp=dialog"
+  to = "/"
   status = 302
   force = true
 
@@ -18,31 +18,30 @@
 
 [[redirects]]
   from = "/results"
-  to = "/"
+  to = "/schedule.html"
   status = 302
   force = true
 
 [[redirects]]
   from = "/results.html"
-  to = "/"
+  to = "/schedule.html"
   status = 302
   force = true
 
 [[redirects]]
   from = "/qr"
-  # TODO: Point QR to the final schedule/results page once brackets and live scores are ready.
-  to = "/#schedule"
+  to = "/schedule.html"
   status = 302
   force = true
 
 [[redirects]]
   from = "/schedule"
-  to = "/#schedule"
+  to = "/schedule.html"
   status = 302
   force = true
 
 [[redirects]]
-  from = "/schedule.html"
-  to = "/#schedule"
+  from = "/standings"
+  to = "/standings.html"
   status = 302
   force = true
