@@ -35,3 +35,43 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+.stat-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+  cursor: help;
+}
+
+.stat-tooltip__content {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5rem);
+  z-index: 30;
+  width: max-content;
+  max-width: 11rem;
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
+  background: #b84b3e;
+  color: #fef0e5;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  transition: opacity 120ms ease-in-out;
+}
+
+.stat-tooltip:focus {
+  outline: 2px solid #00ab5a;
+  outline-offset: 3px;
+}
+
+.stat-tooltip:hover .stat-tooltip__content,
+.stat-tooltip:focus .stat-tooltip__content {
+  opacity: 1;
+}

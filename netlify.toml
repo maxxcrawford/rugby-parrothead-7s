@@ -39,3 +39,9 @@
   to = "/schedule.html"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/standings"
+  to = "/standings.html"
+  status = 302
+  force = true
