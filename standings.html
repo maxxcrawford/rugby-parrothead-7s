@@ -87,8 +87,11 @@
         </section>
 
         <section class="max-w-screen-lg mx-auto mb-16">
-            <div class="mb-8">
-                <h2 class="text-4xl text-[#00ab5a] font-bold pb-2 border-b-4 border-[#00ab5a] px-8">Live Standings</h2>
+            <div class="flex items-center justify-between gap-4 border-b-4 border-[#00ab5a] px-8 mb-8">
+                <h2 class="text-4xl text-[#00ab5a] font-bold pb-2">Live Standings</h2>
+                <button id="reloadData" class="shrink-0 text-xl text-[#00ab5a] opacity-60 hover:opacity-100 disabled:cursor-wait" type="button" aria-label="Reload live standings" title="Reload live standings">
+                    <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                </button>
             </div>
             <div id="csvStandings"></div>
         </section>

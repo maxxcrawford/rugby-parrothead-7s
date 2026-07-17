@@ -25,12 +25,17 @@
       function fetchSheet(url, callback) {
         const separator = url.includes('?') ? '&' : '?';
 
-        fetch(`${url}${separator}_=${Date.now()}`, { cache: 'no-store' })
+        return fetch(`${url}${separator}_=${Date.now()}`, { cache: 'no-store' })
           .then(res => res.text())
-          .then(csv => Papa.parse(csv, {
-            header: true,
-            skipEmptyLines: true,
-            complete: results => callback(results.data)
+          .then(csv => new Promise(resolve => {
+            Papa.parse(csv, {
+              header: true,
+              skipEmptyLines: true,
+              complete: results => {
+                callback(results.data);
+                resolve();
+              }
+            });
           }))
           .catch(err => console.error("Failed to load CSV", err));
       }
@@ -80,9 +85,9 @@
 
       function updateTeams(containerId, csvUrl) {
         const container = document.getElementById(containerId);
-        if (!container) return;
+        if (!container) return Promise.resolve();
 
-        fetchSheet(csvUrl, teams => {
+        return fetchSheet(csvUrl, teams => {
           const groupedTeams = teams.reduce((groups, row) => {
             const teamName = row['Team Names'];
             const division = row['Division'];
@@ -134,9 +139,9 @@
       
       function updateSection(containerId, csvUrl) {
         const container = document.getElementById(containerId);
-        if (!container) return;
+        if (!container) return Promise.resolve();
 
-        fetchSheet(csvUrl, matches => {
+        return fetchSheet(csvUrl, matches => {
           container.innerHTML = '';
           const visibleMatches = matches.filter(shouldDisplayMatch);
 
@@ -340,9 +345,9 @@
 
       function updateStandings(containerId, csvUrl) {
         const container = document.getElementById(containerId);
-        if (!container) return;
+        if (!container) return Promise.resolve();
 
-        fetchSheet(csvUrl, matches => {
+        return fetchSheet(csvUrl, matches => {
           const sections = buildStandingsFromMatches(matches);
 
           if (sections.length === 0) {
@@ -360,20 +365,40 @@
             .join('');
         });
       }
+
+      function refreshPageData() {
+        return Promise.all([
+          updateTeams('csvTeams', CSV_URLS.teams),
+          updateSection('csvPool', CSV_URLS.pool),
+          updateSection('csvSemiFinals', CSV_URLS.semis),
+          updateSection('csvFinals', CSV_URLS.finals),
+          updateStandings('csvStandings', CSV_URLS.pool)
+        ]);
+      }
+
+      function setupReloadButton() {
+        const button = document.getElementById('reloadData');
+        if (!button) return;
+
+        const icon = button.querySelector('i');
+
+        button.addEventListener('click', async () => {
+          button.disabled = true;
+          button.setAttribute('aria-busy', 'true');
+          icon?.classList.add('fa-spin');
+
+          await refreshPageData();
+
+          icon?.classList.remove('fa-spin');
+          button.removeAttribute('aria-busy');
+          button.disabled = false;
+        });
+      }
       
       document.addEventListener('DOMContentLoaded', () => {
-        updateTeams('csvTeams', CSV_URLS.teams);
-        updateSection('csvPool', CSV_URLS.pool);
-        updateSection('csvSemiFinals', CSV_URLS.semis);
-        updateSection('csvFinals', CSV_URLS.finals);
-        updateStandings('csvStandings', CSV_URLS.pool);
-      
-        setInterval(() => {
-          updateSection('csvPool', CSV_URLS.pool);
-          updateSection('csvSemiFinals', CSV_URLS.semis);
-          updateSection('csvFinals', CSV_URLS.finals);
-          updateStandings('csvStandings', CSV_URLS.pool);
-        }, 30000); // 30s refresh
+        refreshPageData();
+        setupReloadButton();
+        setInterval(refreshPageData, 30000); // 30s refresh
       });
 
 
