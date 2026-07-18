@@ -104,16 +104,18 @@
         });
       }
       
-      function createMatchRow(match, isStriped) {
+      function createMatchRow(match, isStriped, isOngoing = false) {
         const isAlumni = isAlumniMatch(match);
         const bg = !isAlumni && isStriped ? ' bg-[#fdd292]' : '';
+        const isCompleted = Boolean(getPoolDivision(match)) && hasCompletedScore(match);
+        const completed = isCompleted ? ' opacity-50' : '';
         const rowStyle = isAlumni ? ` style="background-color: ${isStriped ? '#79e1a7' : '#d0eecf'};"` : '';
         const team1Score = match['Team 1 Score'];
         const team2Score = match['Team 2 Score'];
         const hasScoreDisplay = team1Score !== '' || team2Score !== '';
 
         return `
-          <li class="p-8${bg}"${rowStyle}>
+          <li class="p-8${bg}${completed}"${rowStyle}>
             <div class="flex justify-between text-xl italic mb-4 md:mb-0">
               <div>${escapeHtml(match['Time'])}</div>
               <div>${escapeHtml(match['Match Info'])}</div>
@@ -124,10 +126,14 @@
               </div>
               <div class="text-3xl font-bold md:w-1/3  text-center">
                 ${hasScoreDisplay ? `
-                  <span>${escapeHtml(team1Score)}</span>
-                  -
-                  <span>${escapeHtml(team2Score)}</span>
+                  <div>
+                    <span>${escapeHtml(team1Score)}</span>
+                    -
+                    <span>${escapeHtml(team2Score)}</span>
+                  </div>
+                  ${isCompleted ? '<div class="text-sm font-normal uppercase tracking-wide">Final</div>' : ''}
                 ` : '<span class="text-xl italic font-normal">vs</span>'}
+                ${isOngoing ? '<div class="text-sm font-bold uppercase tracking-wide text-[#00ab5a]">Ongoing</div>' : ''}
               </div>
               <div class="team; flex items-center gap-4 flex-row-reverse md:w-1/3 md:text-right ">
                 <span class="block text-xl font-bold">${escapeHtml(normalizeTeamName(match['Team 2']))}</span>
@@ -144,9 +150,15 @@
         return fetchSheet(csvUrl, matches => {
           container.innerHTML = '';
           const visibleMatches = matches.filter(shouldDisplayMatch);
+          const lastCompletedIndex = visibleMatches.reduce((lastIndex, match, index) => {
+            return hasCompletedScore(match) ? index : lastIndex;
+          }, -1);
+          const ongoingIndex = containerId === 'csvPool' && lastCompletedIndex < visibleMatches.length - 1
+            ? lastCompletedIndex + 1
+            : -1;
 
           visibleMatches.forEach((match, index) => {
-            container.innerHTML += createMatchRow(match, index % 2 === 1);
+            container.innerHTML += createMatchRow(match, index % 2 === 1, index === ongoingIndex);
           });
         });
       }
