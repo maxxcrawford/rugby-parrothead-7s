@@ -54,7 +54,11 @@
       }
 
       function shouldDisplayMatch(match) {
-        return match['Match Info'] !== "Men's 3/4th Place";
+        const matchInfo = match['Match Info'];
+
+        // These tournament stages are complete or not part of the public schedule.
+        return matchInfo !== "Men's 3/4th Place"
+          && matchInfo !== "Women's Final";
       }
 
       function isAlumniMatch(match) {
