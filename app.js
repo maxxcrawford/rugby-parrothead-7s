@@ -10,6 +10,8 @@
 
       const STANDING_WIN_POINTS = 3;
       const STANDING_TIE_POINTS = 1;
+      const MATCH_SECTION_IDS = ['csvPool', 'csvSemiFinals', 'csvFinals'];
+      const matchSections = new Map();
       const STANDING_COLUMNS = ['Seed', 'Team', 'GP', 'W', 'L', 'T', 'PF', 'PA', 'PD', 'Pts'];
       const STANDING_TOOLTIPS = {
         GP: 'Games played',
@@ -149,23 +151,57 @@
         `;
       }
       
+      function getActiveMatch() {
+        if (!matchSections.has('csvPool')) return null;
+
+        const poolMatches = matchSections.get('csvPool') ?? [];
+        const competitivePoolMatches = poolMatches.filter(match => getPoolDivision(match));
+        const currentPoolIndex = poolMatches.findIndex(match => {
+          return getPoolDivision(match) && !hasCompletedScore(match);
+        });
+
+        if (competitivePoolMatches.length === 0) return null;
+
+        if (currentPoolIndex !== -1) {
+          return { sectionId: 'csvPool', matchIndex: currentPoolIndex };
+        }
+
+        for (const sectionId of ['csvSemiFinals', 'csvFinals']) {
+          if (!matchSections.has(sectionId)) return null;
+
+          const matches = matchSections.get(sectionId) ?? [];
+          const matchIndex = matches.findIndex(match => !hasCompletedScore(match));
+
+          if (matchIndex !== -1) return { sectionId, matchIndex };
+        }
+
+        return null;
+      }
+
+      function renderMatchSections() {
+        const pageSectionIds = MATCH_SECTION_IDS.filter(sectionId => document.getElementById(sectionId));
+        const activeMatch = getActiveMatch();
+
+        pageSectionIds.forEach(sectionId => {
+          const container = document.getElementById(sectionId);
+          const matches = matchSections.get(sectionId);
+          if (!matches) return;
+
+          container.innerHTML = matches.map((match, index) => {
+            const isOngoing = activeMatch?.sectionId === sectionId
+              && activeMatch.matchIndex === index;
+
+            return createMatchRow(match, index % 2 === 1, isOngoing);
+          }).join('');
+        });
+      }
+
       function updateSection(containerId, csvUrl) {
-        const container = document.getElementById(containerId);
-        if (!container) return Promise.resolve();
+        if (!document.getElementById(containerId)) return Promise.resolve();
 
         return fetchSheet(csvUrl, matches => {
-          container.innerHTML = '';
-          const visibleMatches = matches.filter(shouldDisplayMatch);
-          const lastCompletedIndex = visibleMatches.reduce((lastIndex, match, index) => {
-            return hasCompletedScore(match) ? index : lastIndex;
-          }, -1);
-          const ongoingIndex = containerId === 'csvPool' && lastCompletedIndex < visibleMatches.length - 1
-            ? lastCompletedIndex + 1
-            : -1;
-
-          visibleMatches.forEach((match, index) => {
-            container.innerHTML += createMatchRow(match, index % 2 === 1, index === ongoingIndex);
-          });
+          matchSections.set(containerId, matches.filter(shouldDisplayMatch));
+          renderMatchSections();
         });
       }
 
