@@ -102,8 +102,11 @@
             <div id="csvTeams"></div>
         </section>
         <section class="max-w-screen-lg mx-auto ">
-            <div class="">
-                <h2 class="text-4xl text-[#00ab5a] font-bold pb-2 border-b-4 border-[#00ab5a] px-8">Schedule &amp; Live Scores</h2>
+            <div class="flex items-center justify-between gap-4 border-b-4 border-[#00ab5a] px-8">
+                <h2 class="text-4xl text-[#00ab5a] font-bold pb-2">Schedule &amp; Live Scores</h2>
+                <button id="reloadData" class="shrink-0 text-xl text-[#00ab5a] opacity-60 hover:opacity-100 disabled:cursor-wait" type="button" aria-label="Reload live schedule and scores" title="Reload live schedule and scores">
+                    <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                </button>
             </div>
 
             <!-- TODO: Add Filter Func -->
