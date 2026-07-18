@@ -323,6 +323,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .scroll-mt-24 {
+    scroll-margin-top: calc(var(--spacing) * 24);
+  }
   .list-disc {
     list-style-type: disc;
   }
@@ -612,6 +615,9 @@
   .text-\[\#00ab5a\] {
     color: #00ab5a;
   }
+  .text-\[\#4ca761\] {
+    color: #4ca761;
+  }
   .text-\[\#242c4c\] {
     color: #242c4c;
   }
@@ -680,6 +686,13 @@
       padding-bottom: calc(var(--spacing) * 0);
     }
   }
+  .hover\:bg-\[\#4ca761\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #4ca761;
+      }
+    }
+  }
   .hover\:bg-\[\#318946\] {
     &:hover {
       @media (hover: hover) {
@@ -712,6 +725,13 @@
     &:hover {
       @media (hover: hover) {
         color: #f0b644;
+      }
+    }
+  }
+  .hover\:text-\[\#fef0e5\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #fef0e5;
       }
     }
   }

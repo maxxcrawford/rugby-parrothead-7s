@@ -109,13 +109,15 @@
         const bg = !isAlumni && isStriped ? ' bg-[#fdd292]' : '';
         const isCompleted = Boolean(getPoolDivision(match)) && hasCompletedScore(match);
         const completed = isCompleted ? ' opacity-50' : '';
+        const currentMatch = isOngoing ? ' id="current-match"' : '';
+        const scrollOffset = isOngoing ? ' scroll-mt-24' : '';
         const rowStyle = isAlumni ? ` style="background-color: ${isStriped ? '#79e1a7' : '#d0eecf'};"` : '';
         const team1Score = match['Team 1 Score'];
         const team2Score = match['Team 2 Score'];
         const hasScoreDisplay = team1Score !== '' || team2Score !== '';
 
         return `
-          <li class="p-8${bg}${completed}"${rowStyle}>
+          <li${currentMatch} class="p-8${bg}${completed}${scrollOffset}"${rowStyle}>
             <div class="flex justify-between text-xl italic mb-4 md:mb-0">
               <div>${escapeHtml(match['Time'])}</div>
               <div>${escapeHtml(match['Match Info'])}</div>
