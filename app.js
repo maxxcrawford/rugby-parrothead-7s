@@ -2,10 +2,10 @@
 	"use strict";
 
     const CSV_URLS = {
-        teams: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=1116127067&single=true&output=csv',
-        pool: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=0&single=true&output=csv',
-        semis: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=301385118&single=true&output=csv',
-        finals: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQu3DNbHLwLO6GPPYO0rWxN_J57AXb-b60yLCQFFh1Pl67DnrjeQieWTPpFtKFEavhO4AyxCm2r1Rjp/pub?gid=2025152971&single=true&output=csv'
+        teams: 'data/2026/team-names.csv',
+        pool: 'data/2026/scores-pool.csv',
+        semis: 'data/2026/scores-semis.csv',
+        finals: 'data/2026/scores-finals.csv'
       };
 
       const STANDING_WIN_POINTS = 3;
